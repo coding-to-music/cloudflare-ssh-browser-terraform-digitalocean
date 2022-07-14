@@ -1,0 +1,21 @@
+{
+  "name": "cloudflare-ssh-browser-terraform-digitalocean",
+  "version": "1.0.0",
+  "description": "Tutorial code demonstrating how to implement Zero Trust, browser based SSH authentication to access a Digitalocean VM. Most of the set up is fully automated using Terraform. ## Documentation",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vortexmind/cloudflare-ssh-browser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vortexmind/cloudflare-ssh-browser/issues"
+  },
+  "homepage": "https://github.com/Vortexmind/cloudflare-ssh-browser#readme"
+}
