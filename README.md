@@ -1,6 +1,6 @@
 # cloudflare-ssh-browser-terraform-digitalocean
 
-# 🚀 Browser-based SSH using Cloudflare & Terraform 🚀
+# 🚀 Browser-based SSH using Cloudflare & Terraform on Digitalocean 🚀
 
 https://github.com/coding-to-music/cloudflare-ssh-browser-terraform-digitalocean
 
