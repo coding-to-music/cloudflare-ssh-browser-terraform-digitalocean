@@ -28,15 +28,16 @@ write_files:
         - service: http_status:404
     path: /etc/cloudflared/config.yml
 runcmd:
-- adduser --disabled-password --gecos "" ${user}
-- mkdir -p /etc/cloudflared
-- wget -O /tmp/cloudflared-linux-amd64.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-- dpkg -i /tmp/cloudflared-linux-amd64.deb
-- cloudflared service install
-- systemctl start cloudflared
-- systemctl enable cloudflared
-- touch /etc/ssh/ca.pub
-- echo -n "${trusted_pub_key}" >> /etc/ssh/ca.pub
-- echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
-- echo "TrustedUserCAKeys /etc/ssh/ca.pub" >> /etc/ssh/sshd_config
-- systemctl restart ssh
+  - adduser --disabled-password --gecos "" ${user}
+  - mkdir -p /etc/cloudflared
+  - wget -O /tmp/cloudflared-linux-amd64.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+  - dpkg -i /tmp/cloudflared-linux-amd64.deb
+  - cloudflared service install
+  - systemctl start cloudflared
+  - systemctl enable cloudflared
+  - touch /etc/ssh/ca.pub
+  - echo -n "${trusted_pub_key}" >> /etc/ssh/ca.pub
+  - echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
+  - echo "TrustedUserCAKeys /etc/ssh/ca.pub" >> /etc/ssh/sshd_config
+  - systemctl restart ssh
+  - curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
