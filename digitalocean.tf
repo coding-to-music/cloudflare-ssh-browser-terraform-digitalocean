@@ -1,3 +1,5 @@
+# https://docs.digitalocean.com/reference/terraform/reference/resources/droplet/
+
 resource "digitalocean_project" "cloudflare_ssh_browser" {
   name        = "cloudflare-ssh-browser"
   description = "SSH via Browser"

@@ -10,6 +10,8 @@ https://github.com/Vortexmind/cloudflare-ssh-browser
 
 https://www.paolotagliaferri.com/secure-in-browser-ssh-with-cloudflare-terraform-digitalocean/
 
+https://docs.digitalocean.com/reference/terraform/reference/resources/droplet/
+
 ## Environment variables:
 
 ```java
