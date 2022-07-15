@@ -13,6 +13,7 @@ data "digitalocean_ssh_key" "default" {
 resource "digitalocean_droplet" "ssh_droplet" {
   image  = var.digitalocean_droplet_image
   name   = "cloudflare-ssh-broswer-droplet"
+  monitoring = "true"
   region = var.digitalocean_droplet_region
   size   = var.digitalocean_droplet_size
   ssh_keys = [
